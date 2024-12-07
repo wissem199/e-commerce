@@ -1,0 +1,25 @@
+<!-- app.component.html -->
+<header class="header">
+  <nav class="navbar">
+    <div class="logo">
+      <h1>Mon E-commerce</h1>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#">Accueil</a></li>
+      <li><a href="#">Produits</a></li>
+      <li><a href="#">Panier</a></li>
+      <li><a href="#">Connexion</a></li>
+    </ul>
+  </nav>
+  <router-outlet></router-outlet>
+</header>
+
+<main class="container">
+  <section class="products">
+    <app-home></app-home>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>© 2024 - Mon E-commerce. Tous droits réservés.</p>
+</footer>

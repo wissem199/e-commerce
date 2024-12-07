@@ -1,0 +1,26 @@
+<div class="container mt-5">
+    <h2 class="mb-4">Mon Panier</h2>
+    <div *ngIf="panier.length === 0">
+      <p>Votre panier est vide.</p>
+    </div>
+    <div *ngFor="let product of panier" class="row mb-3">
+      <div class="col-md-4">
+        <div class="card">
+          <img src="https://via.placeholder.com/300x200" class="card-img-top" alt="{{ product.name }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text">{{ product.description }}</p>
+            <p class="text-primary fw-bold">{{ formatPrice(product.price) }}</p>
+            <button class="btn btn-danger" (click)="removeFromCart(product)">Supprimer du panier</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+    <div class="row">
+      <div class="col-md-12 text-end">
+        <h3>Total: {{ formatPrice(getTotal()) }}</h3>
+      </div>
+    </div>
+  </div>
+  
